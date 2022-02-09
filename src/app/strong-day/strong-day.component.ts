@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { materialize } from 'rxjs';
 
 @Component({
   selector: 'app-strong-day',
@@ -14,6 +15,7 @@ export class StrongDayComponent implements OnInit {
 
   date = new Date();
   dog = new Dog('"Java"', 4);
+  pi = Math.PI;
 
 
   showDog() {
