@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { materialize } from 'rxjs';
+
 
 @Component({
   selector: 'app-strong-day',
-  templateUrl: './strong-day.component.html',
-  styleUrls: ['./strong-day.component.css']
+  templateUrl: './start.component.html',
+  styleUrls: ['./start.component.css']
 })
-export class StrongDayComponent implements OnInit {
+export class StartComponent implements OnInit {
 
   constructor() { }
 

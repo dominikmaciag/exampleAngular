@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StrongDayComponent } from './strong-day/strong-day.component';
+import { StartComponent } from './start/start.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StrongDayComponent
+    StartComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,

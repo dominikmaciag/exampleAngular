@@ -1,0 +1,15 @@
+<p>Days of the week:</p>
+
+<ul>
+  <li *ngFor="let day of days">
+    {{day}}
+  </li>
+</ul>
+<p>All names dogs:</p>
+<ul>
+  <li *ngFor="let dog of dogs; let i = index">
+    {{i+1}} {{dog.name}}
+  </li>
+</ul>
+
+<app-strong-day *ngFor="let i of [1,2]"></app-strong-day>
