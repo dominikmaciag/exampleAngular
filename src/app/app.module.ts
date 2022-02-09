@@ -9,6 +9,8 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { DataBindingTwoWayComponent } from './data-binding-two-way/data-binding-two-way.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     NgIfComponent,
     NgSwitchComponent,
     PropertyBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    DataBindingTwoWayComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
