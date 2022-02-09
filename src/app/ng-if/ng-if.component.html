@@ -1,0 +1,14 @@
+<ul>
+  <ng-container *ngFor="let day of days; let e = even">
+    <li *ngIf="e">
+      {{day}}
+    </li>
+  </ng-container>
+</ul>
+
+<div *ngFor="let dog of dogs">
+  <div *ngIf="dog.age > 4">
+    This {{dog.name}} is 3 years
+  </div>
+
+</div>
