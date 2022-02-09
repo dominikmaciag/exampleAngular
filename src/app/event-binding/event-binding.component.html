@@ -1,0 +1,10 @@
+<p [className]="colorClass">color</p>
+<input [disabled]="isDisable" (focus)="onFocus()" placeholder="zaznacz">
+<br>
+<input [disabled]="isDisable" (click)="onClick($event)" placeholder="kliknij i sprawdź konsole">
+<br>
+<input [disabled]="isDisable" (mousemove)="onMouseMove($event)" placeholder="najedz i sprawdź konsole">
+<br>
+<input [disabled]="isDisable" (paste)="onPaste()" placeholder="wklej text">{{inputText}}
+<br>
+<button (click)="change()">Change</button>
