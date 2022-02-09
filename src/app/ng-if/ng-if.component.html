@@ -6,9 +6,14 @@
   </ng-container>
 </ul>
 
-<div *ngFor="let dog of dogs">
-  <div *ngIf="dog.age > 4">
-    This {{dog.name}} is 3 years
-  </div>
+<div *ngIf="dogs.length > 0; then areDogs else noDogs"></div>
 
-</div>
+<ng-template #areDogs>
+  <div *ngFor="let dog of dogs">
+    This {{dog.name}} is {{dog.age}} years
+  </div>
+</ng-template>
+
+<ng-template #noDogs>
+  <p>There are no dogs</p>
+</ng-template>

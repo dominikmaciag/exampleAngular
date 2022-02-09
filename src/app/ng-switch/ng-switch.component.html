@@ -1,0 +1,12 @@
+<div *ngFor="let day of days">
+  <div [ngSwitch]="day">
+    <div *ngSwitchCase="'Monday'">Poniedziałek</div>
+    <div *ngSwitchCase="'Tuesday'">Wtorek</div>
+    <div *ngSwitchCase="'Wednesday'">Środa</div>
+    <div *ngSwitchCase="'Thursday'">Czwartek</div>
+    <div *ngSwitchCase="'Friday'">Piątek</div>
+    <div *ngSwitchCase="'Saturday'">Sobota</div>
+    <div *ngSwitchCase="'Sunday'">Niedziela</div>
+    <div *ngSwitchDefault>Domyślny</div>
+  </div>
+</div>
