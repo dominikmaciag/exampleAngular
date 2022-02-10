@@ -12,6 +12,7 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { DataBindingTwoWayComponent } from './data-binding-two-way/data-binding-two-way.component';
 import { FormsModule } from '@angular/forms';
 import { TaskToDoListComponent } from './task-to-do-list/task-to-do-list.component';
+import { InputChildComponent } from './input-child/input-child.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { TaskToDoListComponent } from './task-to-do-list/task-to-do-list.compone
     PropertyBindingComponent,
     EventBindingComponent,
     DataBindingTwoWayComponent,
-    TaskToDoListComponent
+    TaskToDoListComponent,
+    InputChildComponent,
+
   ],
   imports: [
     BrowserModule,
