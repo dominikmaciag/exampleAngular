@@ -11,6 +11,7 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { DataBindingTwoWayComponent } from './data-binding-two-way/data-binding-two-way.component';
 import { FormsModule } from '@angular/forms';
+import { TaskToDoListComponent } from './task-to-do-list/task-to-do-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     NgSwitchComponent,
     PropertyBindingComponent,
     EventBindingComponent,
-    DataBindingTwoWayComponent
+    DataBindingTwoWayComponent,
+    TaskToDoListComponent
   ],
   imports: [
     BrowserModule,
