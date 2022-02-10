@@ -14,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { TaskToDoListComponent } from './task-to-do-list/task-to-do-list.component';
 import { InputChildComponent } from './input-parent-to-child/input-child.component';
 import { OutputChildToParentComponent } from './output-child-to-parent/output-child-to-parent.component';
+import { AddTaskComponent } from './task-to-do list-refactoring/add-task/add-task.component';
+import { TodoTasksComponent } from './task-to-do list-refactoring/todo-tasks/todo-tasks.component';
+import { DoneTaskComponent } from './task-to-do list-refactoring/done-task/done-task.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { OutputChildToParentComponent } from './output-child-to-parent/output-ch
     TaskToDoListComponent,
     InputChildComponent,
     OutputChildToParentComponent,
+    AddTaskComponent,
+    TodoTasksComponent,
+    DoneTaskComponent,
 
   ],
   imports: [

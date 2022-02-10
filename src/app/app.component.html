@@ -70,3 +70,17 @@
   <p>
     <app-output-child-to-parent [toChildProps]="childList" (eventChild)="selected($event)"></app-output-child-to-parent>
   </p>
+  <h2>full refactoring to-do-list</h2>
+
+  <!-- down full refactoring to-do-list -->
+  <div class="container">
+    <app-add-task (emitTask)="add($event)"></app-add-task>
+  </div>
+
+  <div class="container">
+    <app-todo-tasks [taskProp]="listTasks" (emitDone)="done($event)" (emitRemove)="remove($event)"></app-todo-tasks>
+  </div>
+
+  <div>
+    <app-done-task [doneProp]="doneTasks"></app-done-task>
+  </div>
