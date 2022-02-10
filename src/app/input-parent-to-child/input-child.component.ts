@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InputChildComponent implements OnInit {
 
-  @Input('taskProp')
-  tasks: any;
+  @Input('childProp')
+  childs: any;
 
   constructor() { }
 

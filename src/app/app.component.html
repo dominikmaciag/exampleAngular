@@ -62,7 +62,11 @@
   <p>
     <app-task-to-do-list></app-task-to-do-list>
   </p>
-  <h2>@Input</h2>
+  <h2>@Input parent to child</h2>
   <p>
-    <app-input-child [taskProp]="tasksList"></app-input-child>
+    <app-input-child [childProp]="childList"></app-input-child>
+  </p>
+  <h2>@Output child to parent + @Input</h2>
+  <p>
+    <app-output-child-to-parent [toChildProps]="childList" (eventChild)="selected($event)"></app-output-child-to-parent>
   </p>
