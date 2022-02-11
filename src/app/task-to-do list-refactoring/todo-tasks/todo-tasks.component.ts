@@ -3,31 +3,27 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-todo-tasks',
   templateUrl: './todo-tasks.component.html',
-  styleUrls: ['./todo-tasks.component.css']
+  styleUrls: ['./todo-tasks.component.css'],
 })
 export class TodoTasksComponent implements OnInit {
-
   @Input('taskProp')
-  listTasks = []  as any;
+  listTasks = [] as any;
 
-@Output()
-emitRemove = new EventEmitter<string>();
+  @Output('removeProp')
+  emitRemove = new EventEmitter<string>();
 
-@Output()
-emitDone = new EventEmitter<string>();
+  @Output('doneProp')
+  emitDone = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  remove(task: string){
+  remove(task: string) {
     this.emitRemove.emit(task);
   }
 
-
-  done(task: string){
+  done(task: string) {
     this.emitDone.emit(task);
   }
-
 }

@@ -17,6 +17,7 @@ import { OutputChildToParentComponent } from './output-child-to-parent/output-ch
 import { AddTaskComponent } from './task-to-do list-refactoring/add-task/add-task.component';
 import { TodoTasksComponent } from './task-to-do list-refactoring/todo-tasks/todo-tasks.component';
 import { DoneTaskComponent } from './task-to-do list-refactoring/done-task/done-task.component';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DoneTaskComponent } from './task-to-do list-refactoring/done-task/done-
     AddTaskComponent,
     TodoTasksComponent,
     DoneTaskComponent,
+    LifecycleHooksComponent,
 
   ],
   imports: [

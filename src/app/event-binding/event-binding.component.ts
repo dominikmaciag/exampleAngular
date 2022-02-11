@@ -3,34 +3,32 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-event-binding',
   templateUrl: './event-binding.component.html',
-  styleUrls: ['./event-binding.component.css']
+  styleUrls: ['./event-binding.component.css'],
 })
-export class EventBindingComponent{
+export class EventBindingComponent {
+  inputText = '';
+  colorClass = 'color';
+  isDisable = true;
 
-inputText = '';
-colorClass = 'color';
-isDisable = true;
+  constructor() {}
 
-constructor(){}
+  onFocus() {
+    this.colorClass = 'color2';
+  }
 
+  onClick(event: any) {
+    console.log(event);
+  }
 
-onFocus(){
-  this.colorClass = 'color2';
-}
+  onMouseMove(event: any) {
+    console.log('x: ' + event.clientX + ', y: ' + event.clientY);
+  }
 
-onClick(event: any){
-  console.log(event);
-}
+  onPaste() {
+    this.inputText = "Don't paste, write";
+  }
 
-onMouseMove(event: any){
-  console.log('x: ' + event.clientX + ', y: ' + event.clientY);
-}
-
-onPaste(){
-this.inputText = "Don't paste, write";
-}
-
-change(){
-  this.isDisable = false;
-}
+  change() {
+    this.isDisable = false;
+  }
 }

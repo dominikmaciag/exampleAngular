@@ -72,15 +72,24 @@
   </p>
   <h2>full refactoring to-do-list</h2>
 
-  <!-- down full refactoring to-do-list -->
+  <!-- start full refactoring to-do-list -->
   <div class="container">
     <app-add-task (emitTask)="add($event)"></app-add-task>
   </div>
 
   <div class="container">
-    <app-todo-tasks [taskProp]="listTasks" (emitDone)="done($event)" (emitRemove)="remove($event)"></app-todo-tasks>
+    <app-todo-tasks [taskProp]="listTasks" (doneProp)="done($event)" (removeProp)="remove($event)"></app-todo-tasks>
   </div>
 
   <div>
     <app-done-task [doneProp]="doneTasks"></app-done-task>
   </div>
+  <!-- end full refactoring to-do-list -->
+  <h2>lifecycle hooks</h2>
+  <div *ngIf="show">
+    <app-lifecycle-hooks [textProp]="title" [dogProp]="dog"></app-lifecycle-hooks>
+  </div>
+  <button (click)="changeTitle()">Change title</button>
+  <button (click)="changeDog()">Change Dog</button>
+  <button (click)="nothing()">Don't anything</button>
+  <button (click)="destroy()">Remove component</button>
