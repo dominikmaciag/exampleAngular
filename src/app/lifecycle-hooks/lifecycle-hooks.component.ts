@@ -42,6 +42,7 @@ export class LifecycleHooksComponent
 Uruchamia się na początku przed ngOnInit,
 sprawdza czy się zmieniły zbindowane pola komponentu,
 musi zmieniać się referencja
+CZĘSTO UŻYWANE
 */
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -54,7 +55,7 @@ musi zmieniać się referencja
   /**
 Uruchamia się jeden raz podcza inicjalizacji komponent
 Uruchomi się po konstruktorze i po ngOnChange
-NAJCZĘŚCIEJ UŻYWANE
+CZĘSTO UŻYWANE
 */
 
   ngOnInit(): void {
@@ -112,6 +113,7 @@ NAJCZĘŚCIEJ UŻYWANE
 
   /**
    *  Uruchamia się wtedy jak nasz komponent ulegnie zniszczeniu
+   *  CZĘSTO UŻYWANE
    */
   ngOnDestroy(): void {
     console.log(

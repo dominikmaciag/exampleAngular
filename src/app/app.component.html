@@ -93,3 +93,11 @@
   <button (click)="changeDog()">Change Dog</button>
   <button (click)="nothing()">Don't anything</button>
   <button (click)="destroy()">Remove component</button>
+
+
+  <h2>local reference</h2>
+  <p>
+    <input #inputText>
+    <button (click)="example(inputText)">Dodaj</button>
+    <app-local-reference #localRefOnComponent [viewsProp]="lista"></app-local-reference>
+  </p>

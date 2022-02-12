@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { LocalReferenceComponent } from './local-reference/local-reference.component';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -44,6 +45,17 @@ export class AppComponent {
 
   destroy() {
     this.show = !this.show;
+  }
+
+  //local reference
+  lista = ['Sprzątanie', 'Gotowanie', 'Nauka'];
+
+  @ViewChild('localRefOnComponent', { static: true }) // robie sobie dostęp do komponentu dziecka
+  LocalReferenceComponent!: LocalReferenceComponent;
+
+  example(Input: HTMLInputElement) {
+    this.lista.push(Input.value);
+    //this.LocalReferenceComponent.list = []; // zerujemy liste, mamy dostęp
   }
 }
 
