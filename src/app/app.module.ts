@@ -19,6 +19,9 @@ import { TodoTasksComponent } from './task-to-do list-refactoring/todo-tasks/tod
 import { DoneTaskComponent } from './task-to-do list-refactoring/done-task/done-task.component';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 import { LocalReferenceComponent } from './local-reference/local-reference.component';
+import { NgStyleNgClassComponent } from './ng-style-ng-class/ng-style-ng-class.component';
+import { Click1Component } from './creation-service/click1/click1.component';
+import { Click2Component } from './creation-service/click2/click2.component';
 
 @NgModule({
   declarations: [
@@ -38,14 +41,12 @@ import { LocalReferenceComponent } from './local-reference/local-reference.compo
     DoneTaskComponent,
     LifecycleHooksComponent,
     LocalReferenceComponent,
-
+    NgStyleNgClassComponent,
+    Click1Component,
+    Click2Component,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

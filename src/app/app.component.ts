@@ -1,5 +1,6 @@
+import { ClickService } from './creation-service/click.service';
 import { LocalReferenceComponent } from './local-reference/local-reference.component';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -44,18 +45,25 @@ export class AppComponent {
   nothing() {}
 
   destroy() {
-    this.show = !this.show;
+    this.title = 'exampleAngular';
   }
 
   //local reference
   lista = ['Sprzątanie', 'Gotowanie', 'Nauka'];
 
-  @ViewChild('localRefOnComponent', { static: true }) // robie sobie dostęp do komponentu dziecka
+  @ViewChild('localRefOnComponent', { static: true }) // robie sobie dostęp do komponentu dziecka w app.html odniesienie
   LocalReferenceComponent!: LocalReferenceComponent;
 
   example(Input: HTMLInputElement) {
     this.lista.push(Input.value);
     //this.LocalReferenceComponent.list = []; // zerujemy liste, mamy dostęp
+  }
+
+  //service
+  listClick: Array<number> = [];
+
+  donee(event: any) {
+    this.listClick.push((this.listClick.length += 1));
   }
 }
 
