@@ -6,8 +6,9 @@ import { Component, ViewChild, Input, OnInit } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  providers: [ClickService],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'exampleAngular';
   childList = ['Angular', 'Java'];
 
@@ -62,8 +63,17 @@ export class AppComponent {
   //service
   listClick: Array<number> = [];
 
+  allClicks!: number;
   donee(event: any) {
     this.listClick.push((this.listClick.length += 1));
+  }
+
+  // RXJS
+  constructor(private ClickService: ClickService) {}
+  ngOnInit(): void {
+    this.ClickService.getSum().subscribe((clicks) => {
+      this.allClicks = clicks;
+    });
   }
 }
 
