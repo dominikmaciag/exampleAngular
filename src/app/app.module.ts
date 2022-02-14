@@ -1,3 +1,4 @@
+import { HttpService } from './http-method/http.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -22,6 +23,9 @@ import { LocalReferenceComponent } from './local-reference/local-reference.compo
 import { NgStyleNgClassComponent } from './ng-style-ng-class/ng-style-ng-class.component';
 import { Click1Component } from './creation-service/click1/click1.component';
 import { Click2Component } from './creation-service/click2/click2.component';
+import { LogService } from './creation-service/log.service';
+import { HttpGETComponent } from './http-method/http.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,9 +48,10 @@ import { Click2Component } from './creation-service/click2/click2.component';
     NgStyleNgClassComponent,
     Click1Component,
     Click2Component,
+    HttpGETComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [LogService, HttpService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

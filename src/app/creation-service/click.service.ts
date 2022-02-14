@@ -1,3 +1,4 @@
+import { LogService } from './log.service';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
@@ -5,6 +6,8 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class ClickService {
+  constructor(private LogService: LogService) {}
+
   sumClicks = 0;
 
   // RXJS
@@ -13,7 +16,7 @@ export class ClickService {
   addClicks() {
     this.sumClicks += 1;
     console.log(this.sumClicks);
-
+    this.LogService.logger('kliknięcie');
     // RXJS
     this.sum.next(this.sumClicks);
   }
