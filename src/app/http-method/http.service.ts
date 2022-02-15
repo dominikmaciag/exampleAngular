@@ -15,7 +15,11 @@ export class HttpService {
     );
   }
 
-  getPosts() {}
+  getPosts(id: number): Observable<Post> {
+    return this.http.get<Post>(
+      'https://jsonplaceholder.typicode.com/posts/' + id
+    );
+  }
 
   getPostByUser() {}
 
