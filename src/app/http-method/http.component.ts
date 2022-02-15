@@ -1,3 +1,4 @@
+import { Subject } from 'rxjs';
 import { HttpService } from './http.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
@@ -18,7 +19,9 @@ export class HttpGETComponent implements OnInit {
     this.HttpService.getPosts(1).subscribe((post) => console.log(post));
   }
 
-  getPostByUser() {}
+  getPostByUser() {
+    this.HttpService.getPostByUser(2).subscribe((user) => console.log(user));
+  }
 
   addPost() {}
 

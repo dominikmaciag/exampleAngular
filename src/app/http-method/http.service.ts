@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Post } from './http.component';
 
@@ -21,7 +21,15 @@ export class HttpService {
     );
   }
 
-  getPostByUser() {}
+  getPostByUser(userId: number): Observable<Array<Post>> {
+    const parm = new HttpParams().set('userId', userId + '');
+    return this.http.get<Array<Post>>(
+      'https://jsonplaceholder.typicode.com/posts/',
+      {
+        params: parm,
+      }
+    );
+  }
 
   addPost() {}
 
